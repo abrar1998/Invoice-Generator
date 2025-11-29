@@ -159,18 +159,26 @@ export default function InvoiceEditor({
       <section className="form-section">
         <h2>Line Items</h2>
         <div className="line-items-container">
+          {/* Header Labels */}
+          <div className="line-item-header">
+            <label className="line-item-label">Particular</label>
+            <label className="line-item-label">Quantity</label>
+            <label className="line-item-label">Rate</label>
+            <label className="line-item-label">Amount</label>
+            <label className="line-item-label">Action</label>
+          </div>
           {invoiceData.lineItems.map((item) => (
             <div key={item.id} className="line-item-row">
               <input
                 type="text"
-                placeholder="Particular"
+                placeholder="Enter particular"
                 value={item.particular}
                 onChange={(e) => onLineItemChange(item.id, 'particular', e.target.value)}
                 className="line-item-input"
               />
               <input
                 type="number"
-                placeholder="Qty"
+                placeholder="0"
                 value={item.quantity}
                 onChange={(e) => onLineItemChange(item.id, 'quantity', parseFloat(e.target.value) || 0)}
                 className="line-item-input number-input"
@@ -178,7 +186,7 @@ export default function InvoiceEditor({
               />
               <input
                 type="number"
-                placeholder="Rate"
+                placeholder="0.00"
                 value={item.rate}
                 onChange={(e) => onLineItemChange(item.id, 'rate', parseFloat(e.target.value) || 0)}
                 className="line-item-input number-input"
@@ -186,7 +194,7 @@ export default function InvoiceEditor({
               />
               <input
                 type="number"
-                placeholder="Amount"
+                placeholder="0.00"
                 value={item.amount}
                 readOnly
                 className="line-item-input number-input readonly"

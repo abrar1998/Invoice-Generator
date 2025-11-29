@@ -140,6 +140,22 @@ select.form-input {
   margin-bottom: 15px;
 }
 
+.line-item-header {
+  display: grid;
+  grid-template-columns: 2fr 80px 100px 100px 50px;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding: 0 8px;
+}
+
+.line-item-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 .line-item-row {
   display: grid;
   grid-template-columns: 2fr 80px 100px 100px 50px;
@@ -546,6 +562,11 @@ select.form-input {
 }
 
 @media (max-width: 900px) {
+  .line-item-header {
+    grid-template-columns: 1.5fr 70px 80px 80px 50px;
+    gap: 6px;
+  }
+
   .line-item-row {
     grid-template-columns: 1.5fr 70px 80px 80px 50px;
     gap: 6px;
@@ -564,6 +585,12 @@ select.form-input {
 
   .invoice-preview {
     padding: 20px;
+  }
+
+  .line-item-header {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    margin-bottom: 5px;
   }
 
   .line-item-row {

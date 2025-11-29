@@ -12,7 +12,7 @@ function App() {
     companyPhone: '9906545900 / 9858392856',
     companyWebsite: 'https://amazewebsolutions.vercel.app/',
     companyLogo: '/AmazeWeblogo.png',
-    customerTitle: 'Name',
+    customerTitle: 'Mr',
     customerName: 'Customer Name',
     invoiceNumber: '001',
     invoiceDate: new Date().toISOString().split('T')[0],
